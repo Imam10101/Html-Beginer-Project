@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="calculator">
+
+        <input type = "text" id = "txtinput" readonly /><br><br>
+      <button id="btn1" value="c"  onclick="document.getElementById('txtinput').value = 0">C</button>
+      <button id="btn2" value="/"  onclick="document.getElementById('txtinput').value += '/'">/</button>
+      <button id="btn3" value="*"  onclick="document.getElementById('txtinput').value += '*'">*</button>
+      <button id="btn4" value="+"  onclick="document.getElementById('txtinput').value += '+'">+</button><br>
+      <button id="btn5" value="7"  onclick="document.getElementById('txtinput').value += 7">7</button>
+      <button id="btn6" value="8"  onclick="document.getElementById('txtinput').value += 8">8</button>
+      <button id="btn7" value="9"  onclick="document.getElementById('txtinput').value += 9">9</button>
+      <button id="btn8" value="-"  onclick="document.getElementById('txtinput').value += '-'">-</button><br>
+      <button id="btn9" value="4"  onclick="document.getElementById('txtinput').value += 4">4</button>
+      <button id="btn10" value="5"  onclick="document.getElementById('txtinput').value += 5">5</button>
+      <button id="btn11" value="6"  onclick="document.getElementById('txtinput').value += 6">6</button>
+      <button id="btn12" value="%"  onclick="document.getElementById('txtinput').value += '%'">%</button><br>
+      <button id="btn13" value="1"  onclick="document.getElementById('txtinput').value += 1">1</button>
+      <button id="btn14" value="2"  onclick="document.getElementById('txtinput').value += 2">2</button>
+      <button id="btn15" value="3"  onclick="document.getElementById('txtinput').value += 3">3</button>
+      <button id="btn16" value="1"  onclick="calculute()">=</button>
+      <script>
+        function calculute() {
+            var result=document.getElementById('txtinput');
+            result.value = eval(result.value);
+        }
+      </script>
+
+
+
+    
+  </div>
+
+
+
+  
+ 
+</body>
+</html>

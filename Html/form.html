@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset style="width: 30px;  margin: auto; background-color: bisque; " >
+<h2>Personal Information</h2>
+
+<form id="myForm" onsubmit="validateForm(); return false;">
+    <!-- Text Input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span id="nameError" class="error"></span><br>
+    <br>
+
+    <!-- Number Input -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="8" max="30" required>
+
+    <span id="ageError" class="error"></span><br>
+    <br>
+
+    <!-- Boolean (Checkbox) -->
+    <label for="isStudent">Are you a student?</label>
+    <input type="checkbox" id="isStudent" name="isStudent">
+    <br>
+    <br>
+    <p>Choose your favorite Web language:</p>
+    <input type="radio" id="html" name="fav_language" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label><br>
+    <br>
+
+    <!-- Date Input -->
+    <label for="birthDate">Birthdate:</label>
+    <input type="date" id="birthDate" name="birthDate" required>
+    <span id="birthDateError" class="error"></span><br>
+    <br>
+    <!-- Image Input -->
+    <label for="profilePic">Profile Picture:</label>
+    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+    <span id="profilePicError" class="error"></span><br>
+    <br>
+
+    <!-- Select Input -->
+    <label for="relationship">Relationship Status:</label>
+    <select id="relationship" name="relationship" required>
+        <option value="">Select</option>
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+        <option value="divorced">Divorced</option>
+        <option value="widowed">Widowed</option>
+    </select>
+    <span id="relationshipError" class="error"></span><br>
+    <br>
+     <!-- Contact Number -->
+     <label for ="mnumber">Mobile Number : </label>
+     <input  type = "text" id="mob" pattern ="[0-9]{11}" placeholder="Input Your Mobile Number" required>
+     <span id="mob" class="error"></span>
+     <br>
+     <br>
+
+    <input type="submit" value="Submit">
+</form>
+</fieldset>
+</body>
+</html> 
